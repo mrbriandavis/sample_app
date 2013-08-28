@@ -7,7 +7,12 @@ gem 'rails', '4.0.0'
 
   group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.11.0'
+   gem 'rspec-rails', '2.13.1'
+  # The following optional lines are part of the advanced setup.
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 group :production do
   gem 'pg'
@@ -30,6 +35,8 @@ gem 'jquery-rails', '2.0.2'
 
 group :test do
 	gem 'capybara', '1.1.2'
+	gem 'rb-fsevent', '0.9.1', :require	=> false
+	gem 'growl', '1.0.3'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
